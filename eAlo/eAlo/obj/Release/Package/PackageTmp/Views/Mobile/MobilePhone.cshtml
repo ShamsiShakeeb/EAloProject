@@ -1,0 +1,884 @@
+﻿@model eAlo.Models.DescriptionProcess
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
+    <!-- Bootstrap CSS File -->
+    <link href="~/Content/lib3/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Libraries CSS Files -->
+    <link href="~/Content/lib3/nivo-slider/css/nivo-slider.css" rel="stylesheet">
+    <link href="~/Content/lib3/owlcarousel/owl.carousel.css" rel="stylesheet">
+    <link href="~/Content/lib3/owlcarousel/owl.transitions.css" rel="stylesheet">
+    <link href="~/Content/lib3/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/Content/lib3/animate/animate.min.css" rel="stylesheet">
+    <link href="~/Content/lib3/venobox/venobox.css" rel="stylesheet">
+    <!-- Nivo Slider Theme -->
+    <link href="~/Content/css3/nivo-slider-theme.css" rel="stylesheet">
+    <!-- Main Stylesheet File -->
+    <link href="~/Content/css3/style1.css" rel="stylesheet">
+    <!-- Responsive Stylesheet File -->
+    <link href="~/Content/css3/responsive.css" rel="stylesheet">
+
+
+    @{
+        if (Session["D"].ToString().Equals("Desktop"))
+        {
+            <link href="~/Content/css3/desktop.css" rel="stylesheet">
+
+        }
+        else
+        {
+            <link href="~/Content/css3/mobile.css" rel="stylesheet">
+
+        }
+
+    }
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>e-alo.com-এ এড পোস্ট করুন</title>
+    <link rel="alternate" href="android-app://com.bikroy/bikroy/post-ad"><!-- This is just a fail-safe for now. This will be removed once AMP is live-->
+    <!-- for all markets. =)-->
+    <!-- currently testing DNS stuff for ghanaweb. This is a temporary change to enable self canonicalization on-->
+    <!-- all the pages.-->
+    <link rel="canonical" href="https://bikroy.com/bn/post-ad/details">
+    <meta name="description" content="Bikroy.com-এ বিজ্ঞাপন পোস্ট করার সময় পণ্য/সেবা সম্পর্কে বিস্তারিত লিখুন।">
+    <meta name="theme-color" content="#149576">
+    <meta name="google-site-verification" content="Fby1wz3clnhb00BBvcVaaqdUDHc-qCbAbTE19zkpyBo">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1, initial-scale=1">
+    <link rel="manifest" href="/manifest.json">
+    <link data-page-stylesheet rel="stylesheet" href="/dist/15463190/css/lg/bikroy/post.css">
+
+    <link rel="msapplication-TileColor" href="#009877">
+    <link rel="msapplication-TileImage" href="/metro-tile.png">
+    <meta property="og:url" content="https://bikroy.com/bn/post-ad/details">
+    <meta property="og:site_name" content="Bikroy.com">
+    <meta property="og:title" content="Bikroy.com-এ এড পোস্ট করুন">
+    <meta property="og:description" content="Bikroy.com-এ বিজ্ঞাপন পোস্ট করার সময় পণ্য/সেবা সম্পর্কে বিস্তারিত লিখুন।">
+    <meta property="og:image" content="https://bikroy.com/facebook-opengraph.png" />
+    <script>
+        window.APIDATA = {};
+        window.CONFIG = {};
+        window.gtmData = [];</script>
+</head>
+<h6 class="hidden">bikroy.com</h6>
+
+<body class="on-post-details is-login" data-os-ver="" data-os="Desktop" data-env="production" data-market="bikroy">
+    <h6 class="hidden">bikroy.com</h6>
+
+
+
+    <header>
+        <!-- header-area start -->
+        <div id="sticker" class="header-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <!-- Navigation -->
+                        <nav class="navbar navbar-default">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                @if (Session["D"].ToString().Equals("Mobile"))
+                                {
+                                    <button type="button" class="" data-toggle="collapse" data-target=".bs-example-navbar-collapse-1" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                }
+                                <!-- Brand -->
+                                <a class="navbar-brand page-scroll sticky-logo" href="~/EAlo/EAlo">
+                                    <h1><span></span>e-alo.com</h1>
+                                    <!-- Uncomment below if you prefer to use an image logo -->
+                                    <!-- <img src="img/logo.png" alt="" title=""> -->
+                                </a>
+                            </div>
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li class="active">
+                                        <a class="page-scroll" href="~/Ads/Ads?Ops=allads&Page=1">সকল বিজ্ঞাপন</a>
+                                    </li>
+                                    <li>
+                                        <a class="page-scroll" href="~/Msg/Msg"><i class="fa fa-comment-o"></i> কথোপকথন  </a>
+                                    </li>
+                                    <li>
+                                        <a class="page-scroll" href="~/Login/Login"><i class="fa fa-user-o"></i>  লগ ইন</a>
+                                    </li>
+
+
+
+
+
+
+                                </ul>
+                            </div>
+                            <!-- navbar-collapse -->
+                        </nav>
+                        <!-- END: Navigation -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <br /> <br /> <br /> <br />
+
+        <div class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+
+                        <div class="credits">
+                            <!--
+                              All the links in the footer should remain intact.
+                              You can delete the links only if you purchased the pro version.
+                              Licensing information: https://bootstrapmade.com/license/
+                              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eBusiness
+                            -->
+                            <a href="https://bootstrapmade.com/"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <br />
+
+
+
+
+
+
+
+
+        <!-- header-area end -->
+    </header>
+
+
+    <div class="app-content" style="cursor: default;">
+        <div class="container main">
+            <div class="ui-panel is-rounded post-item post-details">
+                <div class="ui-panel-content ui-panel-block">
+                    <div class="row">
+                        <div class="col-8">
+                            <h2 class="is-main">কোনো পণ্য বা সেবা বিক্রি করুন</h2>
+                            <ul class="ui-progress has-3 is-short">
+                                <li class="is-past">
+                                    <div class="progress-title"><span class="number">1</span><span class="label">শ্রেণী</span></div>
+                                    <div class="progress-content">
+                                        <div class="post-selected row is-category">
+                                            <div class="col-9 lg-10">
+                                                <svg class="ui-icon i-check">
+                                                    <use xlink:href="#i-check"></use>
+                                                </svg>
+                                                <p class="label">শ্রেণী:</p>
+                                                <nav class="ui-crumbs">
+                                                    <ul>
+                                                        <li class="ui-crumb">@Session["DTB"]</li>
+                                                        <li class="ui-crumb">@Session["Cat"]</li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                            <div class="col-3 lg-2 t-right">
+                                                <a href="~/UserProfile/ProductCell"
+                                                   class="change">পরিবর্তন</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="is-past">
+                                    <div class="progress-title"><span class="number">2</span><span class="label">অবস্থান</span></div>
+                                    <div class="progress-content">
+                                        <div class="post-selected row is-location">
+                                            <div class="col-9 lg-10">
+                                                <svg class="ui-icon i-check">
+                                                    <use xlink:href="#i-check"></use>
+                                                </svg>
+                                                <p class="label">অবস্থান:</p>
+                                                <nav class="ui-crumbs">
+                                                    <ul>
+                                                        <li class="ui-crumb">@Session["City"]</li>
+                                                        <li class="ui-crumb">@Session["Region"]</li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                            <div class="col-3 lg-2 t-right">
+                                                <a href="~/UserProfile/SelectPlace?DTB=@Session["DTB"]&Cat=@Session["Cat"]"
+                                                   class="change">পরিবর্তন</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class=" is-current">
+                                    <div class="progress-title"><span class="number">3</span><span class="label">বিস্তারিত</span></div>
+                                </li>
+                            </ul>
+                            <div class="ui-form is-standard post-form">
+                                @using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+                                {
+
+                                    <h2>ছবি যোগ করুন (আসল ছবি ব্যবহার করুন!)</h2>
+                                    <div class="post-imgs"></div>
+                                    <div class="ui-item post-image is-empty">
+
+                                        <div class="item-content">
+
+                                            <div class="item-thumb"><a><img id="blah" src="#" alt="your image"></a></div>
+                                            <div class="post-upload">
+                                                <input id="imgInp" name="Image" type="file"
+                                                       multiple="multiple" accept=".jpg,.png,.jpeg"><button class="ui-btn is-secondary ">
+                                                    <span class="label">
+                                                        ১ম ছবি
+                                                    </span><span class="spin"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <br />
+
+                                        <div class="item-content">
+
+                                            <div class="item-thumb"><a><img id="blah1" src="#" alt="your image"></a></div>
+                                            <div class="post-upload">
+                                                <input id="imgInp1" name="Image1" type="file"
+                                                       multiple="multiple" accept=".jpg,.png,.jpeg"><button class="ui-btn is-secondary ">
+                                                    <span class="label">
+                                                        ২য় ছবি
+                                                    </span><span class="spin"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <br />
+
+                                        <div class="item-content">
+
+                                            <div class="item-thumb"><a><img id="blah2" src="#" alt="your image"></a></div>
+                                            <div class="post-upload">
+                                                <input id="imgInp2" name="Image2" type="file"
+                                                       multiple="multiple" accept=".jpg,.png,.jpeg"><button class="ui-btn is-secondary ">
+                                                    <span class="label">
+                                                        ৩য় ছবি
+                                                    </span><span class="spin"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <br />
+
+                                        <div class="item-content">
+
+                                            <div class="item-thumb"><a><img id="blah3" src="#" alt="your image"></a></div>
+                                            <div class="post-upload">
+                                                <input id="imgInp3" name="Image3" type="file"
+                                                       multiple="multiple" accept=".jpg,.png,.jpeg"><button class="ui-btn is-secondary ">
+                                                    <span class="label">
+                                                        ৪র্থ ছবি
+                                                    </span><span class="spin"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <br />
+
+                                        <div class="item-content">
+
+                                            <div class="item-thumb"><a><img id="blah4" src="#" alt="your image"></a></div>
+                                            <div class="post-upload">
+                                                <input id="imgInp4" name="Image4" type="file"
+                                                       multiple="multiple" accept=".jpg,.png,.jpeg"><button class="ui-btn is-secondary ">
+                                                    <span class="label">
+                                                        ৫ম ছবি
+                                                    </span><span class="spin"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <br />
+
+
+                                    </div>
+
+                                    <script>
+                                        CONFIG.maxImages = 5;
+                                        CONFIG.imageSize = '';
+                                        CONFIG.maxImageSize = 5242880;
+                                    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+                                    <br />
+
+
+
+
+
+
+                                    <input type="hidden" name="type" value="for_sale"><input type="hidden" name="category"
+                                                                                             value="230"><input type="hidden" name="location" value="1255"><input type="hidden" name="image-ids" value="">
+                                    <div class="post-fields">
+                                        <h2 class="is-main">বিস্তারিত তথ্য দিন</h2>
+                                        <div class="ui-field is-multi">
+                                            <label for="fields-condition-value"
+                                                   class="ui-label section-label">কন্ডিশন</label>
+                                            <div class="ui-field is-inline">
+                                                <label class="ui-label inline-options">
+                                                    <input id="fields-condition-value" name="used"
+                                                           value="ব্যবহৃত" type="radio" class="ui-radio" checked="checked">ব্যবহৃত
+                                                </label><label class="ui-label inline-options">
+                                                    <input id="fields-condition-value"
+                                                           name="used" value="নতুন" type="radio"
+                                                           class="ui-radio">নতুন
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="ui-field is-normal field-brand is-tree">
+                                            <div class="is-autocomplete is-brand is-postad is-lg">
+                                                <div class="is-focus">
+                                                    <label for="fields-brand-value" class="labelBrandInput is-visible">
+
+                                                    </label>
+
+                                                    &nbsp;&nbsp;ব্র্যান্ড:<select name="brand" id="fields-model-value" class="ui-input auto-input">
+
+                                                        <option value=আমরা>আমরা</option>
+                                                        <option value=এসার>এসার</option>
+                                                        <option value=এ_ই_কে_ইউ>এ ই কে ইউ</option>
+                                                        <option value=আইক>আইক</option>
+                                                        <option value=এয়ারম্যাক্স>এয়ারম্যাক্স</option>
+                                                        <option value=অ্যালকাটেল>অ্যালকাটেল</option>
+                                                        <option value=অলভিউ>অলভিউ</option>
+                                                        <option value=এময়>এময়</option>
+                                                        <option value=অ্যাপল_আইফোন>অ্যাপল আইফোন</option>
+                                                        <option value=আরকস>আরকস</option>
+                                                        <option value=আসুস>আসুস</option>
+                                                        <option value=বেনকিউ>বেনকিউ</option>
+                                                        <option value=ব্লাকবেরি>ব্লাকবেরি </option>
+                                                        <option value=ব্লু>ব্লু</option>
+                                                        <option value=বাই>বাই </option>
+                                                        <option value=সেলকন>সেলকন</option>
+                                                        <option value=চায়না_মোবাইল>চায়না মোবাইল</option>
+                                                        <option value=কুলপ্যাড>কুলপ্যাড</option>
+                                                        <option value=ডেল>ডেল</option>
+                                                        <option value=ডিগো>ডিগো</option>
+                                                        <option value=ডুজি>ডুজি</option>
+                                                        <option value=এলিট_মোবাইল>এলিট মোবাইল</option>
+                                                        <option value=স্টার> স্টার</option>
+                                                        <option value=জি_ফাইভ>জি ফাইভ</option>
+                                                        <option value=গিগাবাইট>গিগাবাইট</option>
+                                                        <option value=জিওয়ান>জিওয়ান</option>
+                                                        <option value=গোল্ডবার্গ>গোল্ডবার্গ</option>
+                                                        <option value=গুগল>গুগল</option>
+                                                        <option value=গ্রামীনফোন>গ্রামীনফোন</option>
+                                                        <option value=হায়ার>হায়ার</option>
+                                                        <option value=হেলিও>হেলিও</option>
+                                                        <option value=হাইম্যাক্স>হাইম্যাক্স</option>
+                                                        <option value=হাইসেন্স>হাইসেন্স</option>
+                                                        <option value=হটওয়াভ>হটওয়াভ</option>
+                                                        <option value=এইচটিসি>এইচটিসি</option>
+                                                        <option value=হুয়াওয়ে>হুয়াওয়ে</option>
+                                                        <option value=ইম্যাক্স>ইম্যাক্স</option>
+                                                        <option value=ইনফিনিক্স>ইনফিনিক্স</option>
+                                                        <option value=ইঞ্জু>ইঞ্জু</option>
+                                                        <option value=ইনটেক্স>ইনটেক্স</option>
+                                                        <option value=আইটেল>আইটেল</option>
+                                                        <option value=কার্বন>কার্বন</option>
+                                                        <option value=কেচাউডা>কেচাউডা</option>
+                                                        <option value=কিংস্টার>কিংস্টার</option>
+                                                        <option value=লাভা>লাভা</option>
+                                                        <option value=লিকো>লিকো</option>
+                                                        <option value=লেমন>লেমন</option>
+                                                        <option value=লেনোভো>লেনোভো</option>
+                                                        <option value=লেফোন>লেফোন</option>
+                                                        <option value=লেটভি>লেটভি</option>
+                                                        <option value=এলজি>এলজি</option>
+                                                        <option value=লিনেক্স>লিনেক্স</option>
+                                                        <option value=লাইটটেল>লাইটটেল</option>
+                                                        <option value=ম্যাংগো>ম্যাংগো</option>
+                                                        <option value=মাক্সিমাস>মাক্সিমাস</option>
+                                                        <option value=মেইজু>মেইজু</option>
+                                                        <option value=মাইক্রোসফট>মাইক্রোসফট</option>
+                                                        <option value=মাইক্রোম্যাক্স>মাইক্রোম্যাক্স</option>
+                                                        <option value=মোড>মোড</option>
+                                                        <option value=মটোরোলা>মটোরোলা</option>
+                                                        <option value=মাইসেল>মাইসেল</option>
+                                                        <option value=নকিয়া>নকিয়া</option>
+                                                        <option value=অক্টেন>অক্টেন</option>
+                                                        <option value=ওকাপিয়া>ওকাপিয়া</option>
+                                                        <option value=ওয়ানপ্লাস>ওয়ানপ্লাস</option>
+                                                        <option value=অপ্পো>অপ্পো</option>
+                                                        <option value=অরেঞ্জ>অরেঞ্জ</option>
+                                                        <option value=অন্যান্য_ব্র্যান্ড>অন্যান্য ব্র্যান্ড</option>
+                                                        <option value=প্যানাসনিক>প্যানাসনিক</option>
+                                                        <option value=পীস>পীস</option>
+                                                        <option value=প্রেস্টিজিও>প্রেস্টিজিও</option>
+                                                        <option value=কিউ_মোবাইল>কিউ মোবাইল</option>
+                                                        <option value=র‍্যাংগস>র‍্যাংগস</option>
+                                                        <option value=আর_এন>আর এন</option>
+                                                        <option value=এস_মোবাইল>এস মোবাইল</option>
+                                                        <option value=স্যামসাং>স্যামসাং</option>
+                                                        <option value=সিমেন্স>সিমেন্স</option>
+                                                        <option value=স্কাই>স্কাই</option>
+                                                        <option value=স্মার্ট>স্মার্ট</option>
+                                                        <option value=স্মাইল>স্মাইল</option>
+                                                        <option value=সনি_এরিকসন>সনি এরিকসন</option>
+                                                        <option value=সনি>সনি</option>
+                                                        <option value=স্পাইস>স্পাইস</option>
+                                                        <option value=স্পোর্টস>স্পোর্টস</option>
+                                                        <option value=স্প্রিন্ট>স্প্রিন্ট</option>
+                                                        <option value=স্ট্রবেরী>স্ট্রবেরী</option>
+                                                        <option value=স্টাইলাস>স্টাইলাস</option>
+                                                        <option value=সিম্ফনি>সিম্ফনি</option>
+                                                        <option value=টেকনো>টেকনো</option>
+                                                        <option value=তিনমো>তিনমো</option>
+                                                        <option value=টাইটানিক>টাইটানিক</option>
+                                                        <option value=টর্নেডো>টর্নেডো</option>
+                                                        <option value=ইউমি>ইউমি</option>
+                                                        <option value=ভেনাস>ভেনাস</option>
+                                                        <option value=ভিভো>ভিভো</option>
+                                                        <option value=ভোডাফোন>ভোডাফোন</option>
+                                                        <option value=ওয়ালটন>ওয়ালটন</option>
+                                                        <option value=উই>উই</option>
+                                                        <option value=ওয়েস্টার্ন>ওয়েস্টার্ন</option>
+                                                        <option value=ওয়াইকো>ওয়াইকো</option>
+                                                        <option value=উইনম্যাক্স>উইনম্যাক্স</option>
+                                                        <option value=উইন্সটার>উইন্সটার</option>
+                                                        <option value=জিয়াওমি>জিয়াওমি</option>
+                                                        <option value=জোলো>জোলো</option>
+                                                        <option value=জেলটা>জেলটা</option>
+                                                        <option value=জেডটিই>জেডটিই </option>
+
+                                                    </select>
+
+
+
+                                                    <div class="ui-error is-hidden">
+                                                        <span class="error-msg">
+                                                            আপনাকে
+                                                            একটি অপশন নির্বাচন করতে হবে।
+                                                        </span>
+                                                    </div>
+                                                    <div class="auto-list"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ui-field is-normal field-model is-tree">
+                                            <div class="is-autocomplete is-model is-postad is-lg">
+                                                <div class="is-focus">
+                                                    <label for="fields-model-value" class="labelBrandInput is-visible">মডেল</label>
+                                                    <input id="fields-model-value"
+                                                           name="Model" type="text" class="ui-input auto-input"
+                                                           placeholder="মডেল"><svg class="ui-icon i-arrow-d is-inline">
+                                                        <use xlink:href="#i-arrow-d"></use>
+                                                    </svg>
+                                                    <div class="ui-error is-hidden">
+                                                        <span class="error-msg">
+                                                            আপনাকে
+                                                            একটি অপশন নির্বাচন করতে হবে।
+                                                        </span>
+                                                    </div>
+                                                    <div class="auto-list"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ui-field is-normal field-edition is-text">
+                                            <label for="fields-edition-value"
+                                                   class="ui-label">সংস্করণ (বিকল্প)</label><input id="fields-edition-value"
+                                                                                                   name="songskoron" type="text" class="ui-input"
+                                                                                                   placeholder="সংস্করণ (বিকল্প) ">
+                                        </div>
+                                        <div class="ui-field is-list field-features is-multi">
+                                            <label for="fields-features-value"
+                                                   class="ui-label">ফিচার (বিকল্প)</label><label class="ui-label">
+                                                <input id="fields-features-value-bluetooth" name="fields1"
+                                                       value="ব্লটুথ" type="checkbox" class="ui-checkbox">ব্লটুথ
+                                            </label><label class="ui-label">
+                                                <input id="fields-features-value-camera" name="fields2"
+                                                       value=",ক্যামেরা" type="checkbox" class="ui-checkbox">ক্যামেরা
+                                            </label><label class="ui-label">
+                                                <input id="fields-features-value-dual-lens-camera"
+                                                       name="fields3" value=",ডুয়াল-লেন্স ক্যামেরা"
+                                                       type="checkbox" class="ui-checkbox">ডুয়াল-লেন্স ক্যামেরা
+                                            </label><label class="ui-label">
+                                                <input id="fields-features-value-dual_sim"
+                                                       name="fields4" value=",ডুয়েল সিম" type="checkbox"
+                                                       class="ui-checkbox">ডুয়েল সিম
+                                            </label><label class="ui-label">
+                                                <input id="fields-features-value-expandable-memory" name="fields5"
+                                                       value=",বর্ধনযোগ্য" type="checkbox" class="ui-checkbox">বর্ধনযোগ্য
+                                                মেমরি
+                                            </label><label class="ui-label">
+                                                <input id="fields-features-value-fingerprint-sensor"
+                                                       name="fields6" value=",ফিঙ্গারপ্রিন্ট সেন্সর"
+                                                       type="checkbox" class="ui-checkbox">ফিঙ্গারপ্রিন্ট সেন্সর
+                                            </label><label class="ui-label">
+                                                <input id="fields-features-value-gps" name="fields7"
+                                                       value=",জিপিএস" type="checkbox" class="ui-checkbox">জিপিএস
+                                            </label><label class="ui-label">
+                                                <input id="fields-features-value-keyboard"
+                                                       name="fields8" value=",বাস্তব কিবোর্ড" type="checkbox"
+                                                       class="ui-checkbox">বাস্তব কিবোর্ড
+                                            </label><label class="ui-label">
+                                                <input id="fields-features-value-motion-sensors" name="fields9"
+                                                       value=",মোশন" type="checkbox" class="ui-checkbox">মোশন
+                                                সেন্সর
+                                            </label><label class="ui-label">
+                                                <input id="fields-features-value-network-3g"
+                                                       name="fields10" value=",৩জি" type="checkbox"
+                                                       class="ui-checkbox">৩জি
+                                            </label><label class="ui-label">
+                                                <input id="fields-features-value-network-4g" name="fields11"
+                                                       value=",৪জি" type="checkbox" class="ui-checkbox">৪জি
+                                            </label><label class="ui-label">
+                                                <input id="fields-features-value-network-gsm"
+                                                       name="fields12" value=",জিএসএম" type="checkbox"
+                                                       class="ui-checkbox">জিএসএম
+                                            </label><label class="ui-label">
+                                                <input id="fields-features-value-touch" name="fields13"
+                                                       value=",টাচ  স্ক্রিন" type="checkbox" class="ui-checkbox">টাচ
+                                                স্ক্রিন
+                                            </label>
+                                        </div>
+                                        <div class="ui-field is-normal field-description is-description">
+                                            <label for="fields-description-value" class="ui-label">বিবরণ:বেশি তথ্য = বেশি সংখ্যক আগ্রহী ক্রেতা!</label><textarea id="fields-description-value" name="description"
+                                                                                                                                                                 class="ui-textarea" placeholder="বিবরণ:বেশি তথ্য = বেশি সংখ্যক আগ্রহী ক্রেতা! " rows="6"></textarea>
+                                            <p data-max-chars="5000" class="char-counter">
+                                                <span class="current">0</span><span class="divider">/</span><span class="max">5000</span>
+                                            </p>
+                                        </div>
+                                        <div class="ui-field is-multi">
+                                            <label for="fields-authenticity-value"
+                                                   class="ui-label section-label">জেনুইন</label>
+                                            <div class="ui-field is-inline">
+                                                <label class="ui-label inline-options">
+                                                    <input id="fields-authenticity-value" name="geniune"
+                                                           value="আসল" type="radio" class="ui-radio">আসল
+                                                </label><label class="ui-label inline-options">
+                                                    <input id="fields-authenticity-value"
+                                                           name="geniune" value="রিফারবিশড"
+                                                           type="radio" class="ui-radio">রিফারবিশড
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="ui-field is-inline field-price is-money">
+                                            <label for="fields-price-amount"
+                                                   class="ui-label is-title">মূল্য (৳ভালো দাম নির্বাচন করুন।)</label><input type="hidden"
+                                                                                                                            name="fields[price][currency]" value="BDT"><input id="fields-price-amount"
+                                                                                                                                                                              name="price" type="number" class="ui-input"
+                                                                                                                                                                              placeholder="মূল্য (৳)"><label class="ui-label">
+                                                <input id="fields-price-negotiable"
+                                                       name="negotiable" value="আলোচনা সাপেক্ষে" type="checkbox"
+                                                       class="ui-checkbox">আলোচনা সাপেক্ষে
+                                            </label>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="ui-buttons has-inline margined-btn post-submit gtm-post-ad is_lg">
+                                        <input type="submit" class="ui-btn is-secondary has-busy is-auto" value="বিজ্ঞাপন পোস্ট করুন">
+
+
+                                    </div>
+                                }
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    <br />
+    <footer>
+        <div class="footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="footer-content">
+                            <div class="footer-head">
+                                <div class="footer-logo">
+                                    <h2><span>ই</span>আলো</h2>
+                                </div>
+                                <p>আমাদের অ্যাপ ডাউনলোড করুন , আমাদের সাথে যুক্ত থাকুন,আমাদের ফেসবুক পেজটি লাইক করুন</p>
+                                <div class="footer-icons">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-google"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end single footer -->
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="footer-content">
+                            <div class="footer-head">
+                                <h4>আরও জানুন</h4>
+
+                                <div class="footer-contacts">
+                                    <a href="#">  <p><span>দ্রুত বিক্রি করুন</span></p> </a>
+                                    <a href="#">  <p><span>e-Alo.com-এ Buy Now</span></p></a>
+                                    <a href="#">  <p><span>মেম্বারশিপব্যানার বিজ্ঞাপন</span></p></a>
+                                    <a href="#">   <p><span>বিজ্ঞাপন প্রচার করুন</span></p></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="footer-content">
+                            <div class="footer-head">
+                                <h4>হেল্প ও সাপোর্ট</h4>
+
+                                <div class="footer-contacts">
+                                    <a href="#">  <p><span>প্রশ্ন-উত্তর</span></p> </a>
+                                    <a href="#">  <p><span>e-Alo.com-এ নিরাপদ  থাকুন</span></p></a>
+                                    <a href="#">  <p><span>আমাদের সাথে যোগাযোগ</span></p></a>
+                                    <a href="#">  <p><span>আমাদের সাথে যোগাযোগ</span></p></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="footer-content">
+                            <div class="footer-head">
+                                <h4>সামাজিক</h4>
+
+                                <div class="footer-contacts">
+                                    <a href="#"> <p><span>ব্লগ</span></p> </a>
+                                    <a href="#">  <p><span>ফেইসবুক</span></p> </a>
+                                    <a href="#">  <p><span>টুইটার</span></p></a>
+                                    <a href="#">  <p><span>ইউটিউব</span></p></a>
+
+                                    <a href="#">  <p><span> Google+</span></p></a>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="footer-content">
+                            <div class="footer-head">
+                                <h4>আমাদের কথা</h4>
+
+                                <div class="footer-contacts">
+                                    <a href="#">    <p><span>আমাদের কথা</span></p></a>
+                                    <a href="#">    <p><span>পেশা</span></p></a>
+                                    <a href="#">   <p><span>শর্তাবলী এবং নীতিমালা</span></p></a>
+                                    <a href="#">   <p><span>গোপনীয়তার নীতিমালা</span></p></a>
+
+                                    <a href="#">  <p> <span> সাইটম্যাপ</span></p> </a>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <!-- end single footer -->
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        function readURL(input) {
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $("#imgInp").change(function () {
+            readURL(this);
+        });
+
+
+
+
+    </script>
+
+
+    <script>
+
+        function readURL1(input) {
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah1').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $("#imgInp1").change(function () {
+            readURL1(this);
+        });
+
+
+
+
+    </script>
+
+
+    <script>
+
+        function readURL2(input) {
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah2').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $("#imgInp2").change(function () {
+            readURL2(this);
+        });
+
+
+
+
+    </script>
+
+
+    <script>
+
+        function readURL3(input) {
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah3').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $("#imgInp3").change(function () {
+            readURL3(this);
+        });
+
+
+
+
+    </script>
+
+    <script>
+
+        function readURL4(input) {
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah4').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $("#imgInp4").change(function () {
+            readURL4(this);
+        });
+
+
+
+
+    </script>
+
+
+
+
+    <script src="~/Content/lib3/jquery/jquery.min.js"></script>
+    <script src="~/Content/lib3/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Content/lib3/owlcarousel/owl.carousel.min.js"></script>
+    <script src="~/Content/lib3/venobox/venobox.min.js"></script>
+    <script src="~/Content/lib3/knob/jquery.knob.js"></script>
+    <script src="~/Content/lib3/wow/wow.min.js"></script>
+    <script src="~/Content/lib3/parallax/parallax.js"></script>
+    <script src="~/Content/lib3/easing/easing.min.js"></script>
+    <script src="~/Content/lib3/nivo-slider/js/jquery.nivo.slider.js" type="text/javascript"></script>
+    <script src="~/Content/lib3/appear/jquery.appear.js"></script>
+    <script src="~/Content/lib3/isotope/isotope.pkgd.min.js"></script>
+    <!-- Contact Form JavaScript File -->
+    <script src="~/Content/contactform3.js"></script>
+    <script src="~/Content/js3/main.js"></script>
+
+
+</body>
+
+</html>

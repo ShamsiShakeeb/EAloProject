@@ -1,0 +1,68 @@
+﻿@model eAlo.Models.ListOfImg
+@{
+                /**/
+
+                Layout = null;
+}
+
+
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+    <title>viewLo</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
+    <!-- Bootstrap CSS File -->
+    <link href="~/Content/lib1/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Libraries CSS Files -->
+    <link href="~/Content/lib1/nivo-slider/css/nivo-slider.css" rel="stylesheet">
+    <link href="~/Content/lib1/owlcarousel/owl.carousel.css" rel="stylesheet">
+    <link href="~/Content/lib1/owlcarousel/owl.transitions.css" rel="stylesheet">
+    <link href="~/Content/lib1/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/Content/lib1/animate/animate.min.css" rel="stylesheet">
+    <link href="~/Content/lib1/venobox/venobox.css" rel="stylesheet">
+
+    <link href="~/Content/css1/nivo-slider-theme.css" rel="stylesheet">
+
+    <link href="~/Content/css1/style.css" rel="stylesheet">
+
+    <link href="~/Content/css1/responsive.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+
+
+    <div class="awesome-project-content">
+        <!-- single-awesome-project start -->
+        @{
+
+            for (int i = 0; i < 5; i++)
+            {
+
+                <div class="col-md-4 col-sm-4 col-xs-12 design development">
+                    <div class="single-awesome-project">
+                        <div class="awesome-img">
+                            <img src="~/Content/PostImg/@Model.img[i]" alt="" />
+                            <div class="add-actions text-center">
+                                <div class="project-dec">
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+
+
+
+</body>
+</html>

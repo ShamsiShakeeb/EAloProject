@@ -1,0 +1,85 @@
+﻿@model eAlo.Models.ListOfApproveTable
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <title>Admin Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="~/Content/images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/vendor/perfect-scrollbar/perfect-scrollbar.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/css/util.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/main.css">
+    <!--===============================================================================================-->
+</head>
+<body>
+
+    <div class="limiter">
+        <div class="container-table100">
+            <div class="wrap-table100">
+                <div class="table100">
+                    <table>
+                        <thead>
+                            <tr class="table100-head">
+                                <th class="column1">Email</th>
+                                <th class="column2">Phone</th>
+                                <th class="column3">User Details</th>
+                                <th class="column4">Price</th>
+                                <th class="column5">Fixed Details</th>
+                                <th class="column6">Operation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{ 
+                                for (int i = 0; i < Model.count; i++)
+                                {
+                            <tr>
+                                <td class="column1">@Model.email[i]</td>
+                                <td class="column2">@Model.Phone[i]</td>
+                                <td class="column3">@Model.UserDetails[i]</td>
+                                <td class="column4">@Model.price[i]</td>
+                                <td class="column5">@Model.FixedDetails[i]</td>
+                                <td class="column6"><a href=""> Update </a> <br />  <a href="~/Admin/Delete?UID=@Model.email[i]&PID=@Model.PID[i]"> Delete </a> <br />   <a href="~/Admin/Approve?UID=@Model.email[i]&PID=@Model.PID[i]"> Approve </a> <br/> <a href="~/Admin/ViewImg?UID=@Model.email[i]&PID=@Model.PID[i]"> view </a></td>
+                            </tr>
+                                    }
+                                }
+                            
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--===============================================================================================-->
+    <script src="~/Content/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/vendor/bootstrap/js/popper.js"></script>
+    <script src="~/Content/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/js/main.js"></script>
+
+</body>
+</html>
+
